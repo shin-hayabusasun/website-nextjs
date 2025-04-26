@@ -1,39 +1,38 @@
-import Image from 'next/image'
-import Link from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link'; // 修正: 正しいパスからインポート
+import "@/styles/header.css";
+import { Margarine } from 'next/font/google';
 
-export  function Header() {
+export function Header() {
     return (
       <header>
-        <div>
+        <div className="fix11">
           <div>
-            <Image src="/aicon.png" width={500}  height={500}  loading="lazy" />
+            <Image style={{marginLeft:'30px'}} src="/aicon.png" width={50} height={50} loading="lazy" />
           </div>
-          <div>
-            <div>Hayabusa</div>
-          <nav>
-            <ul>
+          <div class="fix1">
+            <div style={{ marginLeft:'15px', fontSize: '40px' }}>HAYABUSA</div>
+            <nav style={{marginLeft: '700px'}}>
+              <ul class="fix2">
                 <li>
-                  <a href="">Home</a>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <a href="">アプリ</a>
+                  <Link href="/app">アプリ</Link>
                 </li>
                 <li>
-                  <a href="">ブログ</a>
+                  <Link href="/blog">ブログ</Link>
                 </li>
                 <li>
-                  <a href="">講座</a>
+                  <Link href="/lecture">講座</Link>
                 </li>
                 <li>
-                  <a href="">問い合わせ</a>
+                  <Link href="/contact">問い合わせ</Link>
                 </li>
-            </ul>
-        </nav>
+              </ul>
+            </nav>
           </div>
-
         </div>
-        </header>
-      
-    
+      </header>
     );
-  }
+}
