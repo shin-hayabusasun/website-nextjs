@@ -17,12 +17,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Blog() {
+export default function Ir() {
   return (
-    <div>
+    <div class="appmoji">
       
       <Header />  
-  <div>blog</div>
+  <div>IR PDFをホームページから取得</div>
+  <p>IR情報を企業のホームページを指定することで自動取得します。</p>
+  <input></input>
+    <button>取得</button>
    </div>
 
   );
