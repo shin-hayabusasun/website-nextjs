@@ -6,6 +6,7 @@ import{Header} from "../../components/Header.js";
 import{Topbotton} from "../../components/Topbotton.js";
 import{Desc} from "../../components/Desc.js";
 import "@/styles/style.css";
+import "@/styles/app.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,11 +20,9 @@ const geistMono = Geist_Mono({
 
 export default function APP() {
   return (
-    <div class="appmoji">
-      
-      <Header />  
-      <a href="/app/ir_url">IR情報自動化アプリ</a>
-   </div>
-
+    <div className="appmoji">
+      <Header />
+      <a href="/app/ir_url" className="button">IR情報自動化アプリ</a>
+    </div>
   );
 }
