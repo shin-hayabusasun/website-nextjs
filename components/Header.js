@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link'; // 修正: 正しいパスからインポート
-import "@/styles/header.css";
+
 
 
 export function Header() {

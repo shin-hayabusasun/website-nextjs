@@ -1,4 +1,3 @@
-import "@/styles/style.css";
 import Image from 'next/image';
 export function Subtile(props) {
     return(
