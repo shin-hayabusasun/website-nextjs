@@ -1,40 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# HAYABUSA - 趣味と技術を融合したウェブサイト
 
-## Getting Started
+HAYABUSAは、趣味と技術を融合させた個人プロジェクトとして作成されたウェブサイトです。このサイトでは、以下のようなコンテンツを提供しています。
 
-First, run the development server:
+## 主なコンテンツ
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **ブログ**  
+  日々の学びや気づき、技術メモなどを記録したブログを公開しています。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **アプリケーション**  
+  自作の便利ツールやアプリケーションを提供し、日常生活や仕事に役立つ機能をお届けします。入力ファームに入力すると外部apiのFlask,n8n(app,ブログで連携)に送信され処理するようになっている。Flaskは別リポジトリを参照。現在あるのはurlからirのurlを推論するアプリ
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **技術講座**  
+  プログラミングやWeb技術に関する講座を作成し、初心者から上級者まで役立つ情報を発信します。
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## このサイトについて
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+HAYABUSAは、Next.jsを使用して構築されており、最新のWeb技術を活用しています。デザインや機能は、ユーザー体験を重視して設計されています。
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 開発者メモ
+- **外部api**:Flask,n8n(app,ブログで連携)
+- **フレームワーク**: Next.js,Flask,n8n  
+- **ホスティング**: Vercel  
+- **フォント**: Geist（Vercel提供の最適化フォント）
 
-## Learn More
+## 今後の展望
 
-To learn more about Next.js, take a look at the following resources:
+このサイトはまだ開発中であり、今後さらに多くのコンテンツや機能を追加していく予定です。ぜひ定期的に訪問して、新しい情報をチェックしてください！
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## お問い合わせ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+ご意見やご質問がある場合は、[お問い合わせページ](http://localhost:3000/contact)からお気軽にご連絡ください。
