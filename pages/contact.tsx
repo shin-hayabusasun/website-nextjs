@@ -1,5 +1,4 @@
 import{Header} from "../components/Header.js";
-import "@/styles/style.css";
 
 
 

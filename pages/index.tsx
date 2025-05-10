@@ -2,7 +2,6 @@ import Image from "next/image";
 import{Subtile} from "../components/Subtile.js";
 import{Header} from "../components/Header.js";
 import{Desc} from "../components/Desc.js";
-import "@/styles/style.css";
 
 
 

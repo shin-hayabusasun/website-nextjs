@@ -1,6 +1,4 @@
 import{Header} from "../../components/Header.js";
-import "@/styles/style.css";
-import "@/styles/app.css";
 import LinkLink from "next/link";
 
 

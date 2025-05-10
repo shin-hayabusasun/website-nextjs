@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import{Header} from "../../components/Header.js";
-import "@/styles/style.css";
-import "@/styles/app.css";
 
 
 export default function Ir() {
