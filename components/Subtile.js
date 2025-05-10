@@ -1,10 +1,11 @@
 import "@/styles/style.css";
+import Image from 'next/image';
 export function Subtile(props) {
     return(
         
         <div class="fix">
             
-           <img class="background-video"  src="/back.jpeg" />
+       
      
     
         <div class="wrapper">
@@ -16,7 +17,8 @@ export function Subtile(props) {
           </div>
          <div class="block-tile"></div>
          <div class="block-tile1"></div>
-          <div class="text-bottom">{props.tile}</div>
+         <Image class="text-bottom" src={props.tile}  width={350} height={200}  loading="lazy" />
+          
         </div>
       </div>
       
