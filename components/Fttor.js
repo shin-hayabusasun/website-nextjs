@@ -15,9 +15,9 @@ export  function Fttor() {
 
           <ul>
             <li>
-            <a href="">
-            <img src="" alt="sns"/>
-            </a>
+            <Link href="">
+            <Image src="" alt="sns"/>
+            </Link>
             </li>
             <li>
             <a href="">

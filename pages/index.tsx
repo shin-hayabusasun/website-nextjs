@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
-import{Defou} from "../components/Defou.js";
 import{Subtile} from "../components/Subtile.js";
 import{Header} from "../components/Header.js";
-import{Topbotton} from "../components/Topbotton.js";
 import{Desc} from "../components/Desc.js";
 import "@/styles/style.css";
 
@@ -59,7 +57,7 @@ export default function Home() {
       少しずつ内容を充実させていきますので、ぜひまた覗いてみてください!
     </div>
 
-    <Image className="text-bottom" src="/about.png"  width={350} height={200}  loading="lazy" />
+    <Image className="text-bottom" src="/about.png"  width={350} height={200}  loading="lazy" alt="aa" />
     
     <div style={{marginTop:'70px'}}></div>
     <Subtile dep="BLOG&nbsp;is&nbsp;many&nbsp;Information&nbsp;about&nbsp;me" tile="/blog.png" />

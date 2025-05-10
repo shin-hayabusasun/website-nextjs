@@ -1,12 +1,6 @@
-import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { Geist, Geist_Mono } from "next/font/google";
-import{Defou} from "../../components/Defou.js";
-import{Subtile} from "../../components/Subtile.js";
 import{Header} from "../../components/Header.js";
-import{Topbotton} from "../../components/Topbotton.js";
-import{Desc} from "../../components/Desc.js";
 import "@/styles/style.css";
 import "@/styles/app.css";
 

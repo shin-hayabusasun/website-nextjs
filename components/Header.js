@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link'; // 修正: 正しいパスからインポート
 import "@/styles/header.css";
-import { Margarine } from 'next/font/google';
+
 
 export function Header() {
     return (
