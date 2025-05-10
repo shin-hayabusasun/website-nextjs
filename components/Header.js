@@ -11,7 +11,7 @@ export function Header() {
             <Image style={{marginLeft:'30px'}} src="/aicon.png" width={50} height={50} loading="lazy" />
           </div>
           <div class="fix1">
-            <div style={{ marginLeft:'15px', fontSize: '40px' }}>HAYABUSA</div>
+            <div style={{ marginLeft:'15px', fontSize: '40px' ,color:'white'}}>HAYABUSA</div>
             <nav style={{marginLeft: '700px'}}>
               <ul class="fix2">
                 <li>
