@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 import{Subtile} from "../components/Subtile.js";
 import{Header} from "../components/Header.js";
 import{Desc} from "../components/Desc.js";
