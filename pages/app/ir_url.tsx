@@ -13,7 +13,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     try {
-        const res = await fetch("https://website-nextjs-dd/api/ir", {
+        const res = await fetch("https://website-nextjs-dd6x.vercel.app/api/ir", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ "url": url }),
