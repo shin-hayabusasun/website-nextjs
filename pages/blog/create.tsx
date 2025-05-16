@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import {useState } from "react";
 import{Header} from "../../components/Header.js";
 import { useRouter } from "next/router";
 
@@ -21,7 +21,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             return;
         }
 
-        const result = await res.json();
+        
 
         
 
