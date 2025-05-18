@@ -1,5 +1,6 @@
 import {useState,useEffect } from "react";
 import{Header} from "../../components/Header.js";
+import type { GetServerSidePropsContext, GetServerSideProps } from "next";
 
 type BlogData = {
   id: number;
@@ -8,12 +9,15 @@ type BlogData = {
   createdAt: string;
 }
 
-export async function getServerSideProps(context: any) {
-    const { id } = context.params;
+
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+    const { id } = context.params as { id: string }; // Extract the id from the URL parameters
     return {
         props: { id }, // Pass the id to the page component as a prop
     };
 }
+
 
 export default function Blogone({id}: { id: number }) {
 
