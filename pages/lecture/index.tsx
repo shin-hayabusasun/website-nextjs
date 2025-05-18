@@ -5,7 +5,10 @@ export default function Blog() {
     <div>
       
       <Header />  
-  <div>blog</div>
+      <div className="appmoji">ブログの動作動画</div>
+     <video   muted controls>
+  <source src="/blog.mp4" type="video/mp4" />
+</video> 
    </div>
 
   );
