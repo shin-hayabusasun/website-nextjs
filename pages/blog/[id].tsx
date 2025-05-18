@@ -1,6 +1,6 @@
 import {useState,useEffect } from "react";
 import{Header} from "../../components/Header.js";
-import type { GetServerSidePropsContext, GetServerSideProps } from "next";
+import type { GetServerSidePropsContext} from "next";
 
 type BlogData = {
   id: number;
