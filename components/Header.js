@@ -29,6 +29,9 @@ export function Header() {
                 <li>
                   <Link href="/contact">問い合わせ</Link>
                 </li>
+                <li>
+                  <Link href="/login">ログイン</Link>
+                </li>
               </ul>
             </nav>
           </div>
