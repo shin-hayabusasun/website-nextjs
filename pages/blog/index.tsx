@@ -37,61 +37,22 @@ export default function Blog() {
   }, []);
 
   return (
-    <div>
+    <div >
       <Header />
-      <Link
-        href="/blog/create"
-        style={{
-          textDecoration: "none",
-          color: "#fff",
-          background: "black",
-          padding: "8px 16px",
-          borderRadius: "6px",
-          display: "inline-block",
-          margin: "16px 0",
-        }}
-      >
-        ブログ作成ページ
-      </Link>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "20px",
-          marginTop: "24px",
-        }}
-      >
+      <div className="blog-header-row">
+        <Link href="/blog/create" className="blog-create-btn">
+          ブログ作成ページ
+        </Link>
+      </div>
+      <div className="blog-list">
         {blog.map((item) => (
           <Link
-            href={`/blog/${item.id}`}
+            href={`blog/${item.id}`}
             key={item.id}
-            style={{
-              textDecoration: "none",
-              color: "#222",
-              background: "#f5f5f5",
-              border: "1px solid #e0e0e0",
-              borderRadius: "8px",
-              padding: "20px",
-              transition: "box-shadow 0.2s",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
-            }}
+            className="blog-card"
           >
-            <h2
-              style={{
-                margin: "0 0 8px 0",
-                fontSize: "1.3rem",
-              }}
-            >
-              {item.title}
-            </h2>
-            <p
-              style={{
-                margin: "0 0 4px 0",
-                color: "#666",
-              }}
-            >
-              {item.createdAt}
-            </p>
+            <h2 className="blog-title">{item.title}</h2>
+            <p className="blog-date">{item.createdAt}</p>
           </Link>
         ))}
       </div>

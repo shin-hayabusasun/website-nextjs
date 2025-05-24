@@ -4,9 +4,13 @@ import LinkLink from "next/link";
 
 export default function APP() {
   return (
-    <div className="appmoji">
+    <div className="appmoji ">
       <Header />
-      <LinkLink href="/app/ir_url" className="button">IR情報自動化アプリ</LinkLink>
+      <div className="center-content">
+        <LinkLink href="/app/ir_url" className="modern-button">
+          IR情報自動化アプリ
+        </LinkLink>
+      </div>
     </div>
   );
 }

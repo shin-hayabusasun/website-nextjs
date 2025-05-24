@@ -8,7 +8,7 @@ export default function Create() {
     const [body, setbody] = useState("");
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
         const res = await fetch("http://127.0.0.1:5000/api/blog", {
             method: "POST",
@@ -21,9 +21,9 @@ const handleSubmit = async (e: React.FormEvent) => {
             return;
         }
 
-        
 
-        
+
+
 
         router.push({
             pathname: "/blog"
@@ -33,21 +33,16 @@ const handleSubmit = async (e: React.FormEvent) => {
     }
 };
 return(
-<div className="appmoji">
-      <Header />
-      <div className="center"> 
-      <div style={{fontSize: "30px"}}>blog作成フォーム</div>
-     
-
-      <form onSubmit={handleSubmit}>
-      <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="input-field" placeholder="タイトルを入力して" ></input>
-        <input type="text" value={body} onChange={(e) => setbody(e.target.value)} className="input-field" placeholder="内容を入力して" ></input>
-      <button type="submit" className="button">取得</button>
+  <div >
+    <Header />
+    <div className="blog-create-center"> 
+      <div className="blog-create-title">blog作成フォーム</div>
+      <form onSubmit={handleSubmit} className="blog-create-form">
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="blog-create-input" placeholder="タイトルを入力して" />
+        <input type="text" value={body} onChange={(e) => setbody(e.target.value)} className="blog-create-input" placeholder="内容を入力して" />
+        <button type="submit" className="blog-create-btn">取得</button>
       </form>
-
-      </div>
     </div>
-
-
+  </div>
 );
 }
