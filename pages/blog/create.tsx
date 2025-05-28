@@ -1,4 +1,4 @@
-import {useState } from "react";
+import {useState,useEffect } from "react";
 import{Header} from "../../components/Header.js";
 import { useRouter } from "next/router";
 
@@ -6,13 +6,54 @@ export default function Create() {
     const router = useRouter();
     const [title, setTitle] = useState("");
     const [body, setbody] = useState("");
+
+    const Chek = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/login_admin", {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+        });
+
+        if (!res.ok) {
+          router.push({
+            pathname: "/blog/no"
+        });
+        }
+
+        const re = await res.json();
+        console.log("con:",re.re);
+        if(re.re==="Admin"){
+          
+        }
+        else{
+          router.push({
+            pathname: "/blog/no"
+        });
+        }
+
+
+
+
+    } catch (error) {
+      router.push({
+        pathname: "/blog/no"
+    });
+    }
+    };
+
+    useEffect(() => {
+      Chek();
+     }, []);
+
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
-        const res = await fetch("http://127.0.0.1:5000/api/blog", {
+        const res = await fetch("http://localhost:5000/api/blog", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
+            credentials: "include",
             body: JSON.stringify({ "title":title, "body": body }),
         });
 

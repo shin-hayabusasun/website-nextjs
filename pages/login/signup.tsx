@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import{Header} from "../../components/Header.js";
+import { useRouter } from "next/router";
 
 const Signup = () => {
+  const router = useRouter();
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
@@ -37,6 +40,10 @@ const Signup = () => {
         console.log("API Responseda:", result.message);
         if (result.message === "User created successfully") {
             alert("サインアップしました！");
+            router.push({
+              pathname: "/login"
+          });
+
         }
 
         
@@ -49,7 +56,10 @@ const Signup = () => {
   };
 
   return (
+    <div>
+    <Header />
     <div style={{ maxWidth: 400, margin: "40px auto", padding: 24, border: "1px solid #ccc", borderRadius: 8,color: "black"  }}>
+      
       <Link href="/login" style={{ textAlign: "center", marginBottom: 24 }}>ログインへ戻る</Link>
       <h2>新規登録</h2>
       <form onSubmit={handleSubmit}>
@@ -92,6 +102,7 @@ const Signup = () => {
         {error && <div style={{ color: "red", marginBottom: 16 }}>{error}</div>}
         <button type="submit" style={{ width: "100%", padding: 10 }}>新規登録</button>
       </form>
+    </div>
     </div>
   );
 };

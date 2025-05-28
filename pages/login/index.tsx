@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import{Header} from "../../components/Header.js";
+import { useRouter } from "next/router";
+
 
 const Login = () => {
+  const router = useRouter();
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,7 +21,7 @@ const Login = () => {
    
     
     try {
-        const res = await fetch("http://127.0.0.1:5000/api/login", {
+        const res = await fetch("http://localhost:5000/api/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
@@ -35,6 +39,10 @@ const Login = () => {
 
         if (result.message === "Login successful") {
             alert("ログインしました！");
+            router.push({
+              pathname: "/blog"
+          });
+
             
         } else {
             setError("メールアドレスまたはパスワードが間違っています。");
@@ -50,7 +58,10 @@ const Login = () => {
   };
 
   return (
+    <div>
+      <Header />
     <div style={{ maxWidth: 400, margin: "40px auto", padding: 24, border: "1px solid #ccc", borderRadius: 8,color: "black" }}>
+      
         <Link href="/login/signup" style={{ textAlign: "center", marginBottom: 24 }}>新規登録</Link>
       <h2>ログイン</h2>
       <form onSubmit={handleSubmit}>
@@ -81,6 +92,7 @@ const Login = () => {
         {error && <div style={{ color: "red", marginBottom: 16 }}>{error}</div>}
         <button type="submit" style={{ width: "100%", padding: 10 }}>ログイン</button>
       </form>
+    </div>
     </div>
   );
 };
